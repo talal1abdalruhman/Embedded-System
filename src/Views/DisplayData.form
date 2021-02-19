@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane1" pref="830" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+              <Component id="refreshBtn" min="-2" pref="180" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="deleteAllBtn" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="Extract2Excel" min="-2" pref="180" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+              <Component id="updateRecord" min="-2" pref="159" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="Req_status_CB" min="-2" pref="120" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+              <Component id="hospitalCB" min="-2" pref="250" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="yearsCB" min="-2" pref="120" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="yearsCB" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                      <Component id="hospitalCB" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Req_status_CB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" pref="282" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Extract2Excel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="refreshBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="updateRecord" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="deleteAllBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JComboBox" name="yearsCB">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="14" style="0"/>
+        </Property>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="11">
+            <StringItem index="0" value="&#x627;&#x644;&#x643;&#x644;"/>
+            <StringItem index="1" value="2021"/>
+            <StringItem index="2" value="2022"/>
+            <StringItem index="3" value="2023"/>
+            <StringItem index="4" value="2024"/>
+            <StringItem index="5" value="2025"/>
+            <StringItem index="6" value="2026"/>
+            <StringItem index="7" value="2027"/>
+            <StringItem index="8" value="2028"/>
+            <StringItem index="9" value="2029"/>
+            <StringItem index="10" value="2030"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="yearsCBActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="jTable1">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="17" rowCount="0">
+                <Column editable="true" title="ID" type="java.lang.Object"/>
+                <Column editable="true" title="&#x62a;&#x627;&#x631;&#x64a;&#x62e; &#x627;&#x644;&#x637;&#x644;&#x628;" type="java.lang.Object"/>
+                <Column editable="true" title="&#x627;&#x644;&#x645;&#x633;&#x62a;&#x634;&#x641;&#x649;" type="java.lang.Object"/>
+                <Column editable="true" title="&#x627;&#x644;&#x642;&#x633;&#x645;" type="java.lang.Object"/>
+                <Column editable="true" title="&#x631;&#x642;&#x645; &#x627;&#x644;&#x637;&#x644;&#x628;" type="java.lang.Object"/>
+                <Column editable="true" title="&#x627;&#x633;&#x645; &#x627;&#x644;&#x62c;&#x647;&#x627;&#x632;" type="java.lang.Object"/>
+                <Column editable="true" title="&#x627;&#x644;&#x634;&#x631;&#x643;&#x629; &#x627;&#x644;&#x635;&#x627;&#x646;&#x639;&#x629;" type="java.lang.Object"/>
+                <Column editable="true" title="&#x627;&#x644;&#x645;&#x648;&#x62f;&#x64a;&#x644;" type="java.lang.Object"/>
+                <Column editable="true" title="&#x627;&#x644;&#x631;&#x642;&#x645; &#x627;&#x644;&#x62a;&#x633;&#x644;&#x633;&#x644;&#x64a;" type="java.lang.Object"/>
+                <Column editable="true" title="&#x627;&#x644;&#x642;&#x637;&#x639;" type="java.lang.Object"/>
+                <Column editable="true" title="&#x62d;&#x627;&#x644;&#x629; &#x627;&#x644;&#x637;&#x644;&#x628;" type="java.lang.Object"/>
+                <Column editable="true" title="&#x635;&#x627;&#x62f;&#x631; &#x627;&#x644;&#x645;&#x634;&#x62a;&#x631;&#x64a;&#x627;&#x62a;" type="java.lang.Object"/>
+                <Column editable="true" title="&#x635;&#x627;&#x62f;&#x631; &#x627;&#x644;&#x630;&#x645;&#x645;" type="java.lang.Object"/>
+                <Column editable="true" title="&#x645;&#x635;&#x62f;&#x631; &#x627;&#x644;&#x634;&#x631;&#x627;&#x621;" type="java.lang.Object"/>
+                <Column editable="true" title="&#x627;&#x644;&#x642;&#x64a;&#x645;&#x629;" type="java.lang.Object"/>
+                <Column editable="true" title="&#x627;&#x644;&#x62a;&#x627;&#x631;&#x64a;&#x62e;" type="java.lang.Object"/>
+                <Column editable="true" title="&#x627;&#x644;&#x62a;&#x633;&#x644;&#x633;&#x644; &#x641;&#x64a; &#x627;&#x644;&#x62c;&#x644;&#x627;&#x633;&#x648;&#x631;" type="java.lang.Object"/>
+              </Table>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="Extract2Excel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="14" style="0"/>
+        </Property>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/Image/icons8-export-excel-25.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#x627;&#x633;&#x62a;&#x62e;&#x631;&#x627;&#x62c; &#x627;&#x644;&#x628;&#x64a;&#x627;&#x646;&#x627;&#x62a; "/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Extract2ExcelActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="updateRecord">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="14" style="0"/>
+        </Property>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/Image/icons8-edit-property-25.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#x62a;&#x639;&#x62f;&#x64a;&#x644; &#x627;&#x644;&#x637;&#x644;&#x628;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="updateRecordActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="refreshBtn">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="14" style="0"/>
+        </Property>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/Image/icons8-restore-25.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#x62a;&#x62d;&#x62f;&#x64a;&#x62b;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="refreshBtnActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x633;&#x646;&#x629;:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="hospitalCB">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="14" style="0"/>
+        </Property>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="18">
+            <StringItem index="0" value="&#x627;&#x644;&#x643;&#x644;"/>
+            <StringItem index="1" value="&#x645;&#x633;&#x62a;&#x634;&#x641;&#x649; &#x627;&#x644;&#x62d;&#x633;&#x64a;&#x646;"/>
+            <StringItem index="2" value="&#x645;&#x633;&#x62a;&#x634;&#x641;&#x649; &#x627;&#x644;&#x645;&#x644;&#x643;&#x629; &#x631;&#x627;&#x646;&#x64a;&#x627; &#x627;&#x644;&#x639;&#x628;&#x62f;&#x627;&#x644;&#x644;&#x647; &#x644;&#x644;&#x623;&#x637;&#x641;&#x627;&#x644;"/>
+            <StringItem index="3" value="&#x645;&#x633;&#x62a;&#x634;&#x641;&#x649; &#x627;&#x644;&#x645;&#x644;&#x643;&#x629; &#x639;&#x644;&#x64a;&#x627;&#x621; &#x627;&#x644;&#x639;&#x633;&#x643;&#x631;&#x64a;"/>
+            <StringItem index="4" value="&#x645;&#x633;&#x62a;&#x634;&#x641;&#x649; &#x627;&#x644;&#x623;&#x645;&#x64a;&#x631;&#x629; &#x647;&#x64a;&#x627; &#x628;&#x646;&#x62a; &#x627;&#x644;&#x62d;&#x633;&#x64a;&#x646;"/>
+            <StringItem index="5" value="&#x645;&#x633;&#x62a;&#x634;&#x641;&#x649; &#x627;&#x644;&#x623;&#x645;&#x64a;&#x631; &#x631;&#x627;&#x634;&#x62f; &#x628;&#x646; &#x627;&#x644;&#x62d;&#x633;&#x646;"/>
+            <StringItem index="6" value="&#x645;&#x633;&#x62a;&#x634;&#x641;&#x649; &#x627;&#x644;&#x623;&#x645;&#x64a;&#x631; &#x639;&#x644;&#x64a; &#x628;&#x646; &#x627;&#x644;&#x62d;&#x633;&#x64a;&#x646;"/>
+            <StringItem index="7" value="&#x645;&#x633;&#x62a;&#x634;&#x641;&#x649; &#x627;&#x644;&#x623;&#x645;&#x64a;&#x631; &#x632;&#x64a;&#x62f; &#x628;&#x646; &#x627;&#x644;&#x62d;&#x633;&#x64a;&#x646;"/>
+            <StringItem index="8" value="&#x645;&#x633;&#x62a;&#x634;&#x641;&#x649; &#x627;&#x644;&#x623;&#x645;&#x64a;&#x631; &#x647;&#x627;&#x634;&#x645; &#x628;&#x646; &#x627;&#x644;&#x62d;&#x633;&#x64a;&#x646;"/>
+            <StringItem index="9" value="&#x645;&#x633;&#x62a;&#x634;&#x641;&#x649; &#x627;&#x644;&#x623;&#x645;&#x64a;&#x631; &#x647;&#x627;&#x634;&#x645; &#x628;&#x646; &#x639;&#x628;&#x62f;&#x627;&#x644;&#x644;&#x647; &#x627;&#x644;&#x62b;&#x627;&#x646;&#x64a;"/>
+            <StringItem index="10" value="&#x645;&#x631;&#x643;&#x632; &#x645;&#x639;&#x627;&#x644;&#x62c;&#x629; &#x627;&#x644;&#x623;&#x648;&#x631;&#x627;&#x645;"/>
+            <StringItem index="11" value="&#x645;&#x631;&#x643;&#x632; &#x627;&#x644;&#x645;&#x644;&#x643;&#x629; &#x639;&#x644;&#x64a;&#x627;&#x621; &#x644;&#x623;&#x645;&#x631;&#x627;&#x636; &#x648;&#x62c;&#x631;&#x627;&#x62d;&#x629; &#x627;&#x644;&#x642;&#x644;&#x628;"/>
+            <StringItem index="12" value="&#x645;&#x631;&#x643;&#x632; &#x627;&#x644;&#x627;&#x645;&#x64a;&#x631; &#x62d;&#x633;&#x64a;&#x646; &#x644;&#x623;&#x645;&#x631;&#x627;&#x636; &#x648;&#x62c;&#x631;&#x627;&#x62d;&#x629; &#x627;&#x644;&#x643;&#x644;&#x649;"/>
+            <StringItem index="13" value="&#x645;&#x631;&#x643;&#x632; &#x627;&#x644;&#x623;&#x645;&#x64a;&#x631;&#x629; &#x625;&#x64a;&#x645;&#x627;&#x646; &#x644;&#x644;&#x623;&#x628;&#x62d;&#x627;&#x62b; &#x648;&#x627;&#x644;&#x639;&#x644;&#x648;&#x645; &#x627;&#x644;&#x645;&#x62e;&#x628;&#x631;&#x64a;&#x629;"/>
+            <StringItem index="14" value="&#x645;&#x631;&#x643;&#x632; &#x627;&#x644;&#x62a;&#x623;&#x647;&#x64a;&#x644; &#x627;&#x644;&#x645;&#x644;&#x643;&#x64a;"/>
+            <StringItem index="15" value="&#x645;&#x631;&#x643;&#x632; &#x637;&#x628;&#x64a; &#x627;&#x644;&#x62d;&#x633;&#x627;"/>
+            <StringItem index="16" value="&#x645;&#x631;&#x643;&#x632; &#x637;&#x628;&#x64a; &#x627;&#x644;&#x642;&#x648;&#x64a;&#x631;&#x629;"/>
+            <StringItem index="17" value="&#x623;&#x62e;&#x631;&#x649;"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hospitalCBActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x645;&#x633;&#x62a;&#x634;&#x641;&#x649;:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#x62d;&#x627;&#x644;&#x629; &#x627;&#x644;&#x637;&#x644;&#x628;:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="Req_status_CB">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="14" style="0"/>
+        </Property>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="7">
+            <StringItem index="0" value="&#x627;&#x644;&#x643;&#x644;"/>
+            <StringItem index="1" value="&#x62a;&#x645; &#x627;&#x644;&#x634;&#x631;&#x627;&#x621; (&#x633;&#x644;&#x641;&#x647;)"/>
+            <StringItem index="2" value="&#x62a;&#x645; &#x627;&#x644;&#x634;&#x631;&#x627;&#x621; (&#x630;&#x645;&#x645;)"/>
+            <StringItem index="3" value=" &#x642;&#x637;&#x639; &#x627;&#x62d;&#x62a;&#x64a;&#x627;&#x637;&#x64a;&#x647;"/>
+            <StringItem index="4" value="&#x625;&#x635;&#x644;&#x627;&#x62d;"/>
+            <StringItem index="5" value="&#x642;&#x64a;&#x62f; &#x627;&#x644;&#x627;&#x62c;&#x631;&#x627;&#x621;"/>
+            <StringItem index="6" value="&#x645;&#x648;&#x627;&#x641;&#x642;&#x629; &#x645;&#x62f;&#x64a;&#x631;&#x64a;&#x629;"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Req_status_CBActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="deleteAllBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x62d;&#x630;&#x641; &#x627;&#x644;&#x643;&#x644;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteAllBtnActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
