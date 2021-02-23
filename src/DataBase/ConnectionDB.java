@@ -179,16 +179,28 @@ public class ConnectionDB {
         }
         return sum;
     }
-    
-    public int deleteAllRecord(){
-        String sql="DELETE FROM RECORDS";
+
+    public int deleteAllRecord() {
+        String sql = "DELETE FROM RECORDS";
         int rs = 0;
         try {
             rs = stmt.executeUpdate(sql);
         } catch (SQLException ex) {
             Logger.getLogger(ConnectionDB.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-       return rs;
+
+        return rs;
+    }
+
+    public int deleteRecord(String id) {
+        String sql = "DELETE FROM RECORDS where ID='" + id + "'";
+        int rs = 0;
+        try {
+            rs = stmt.executeUpdate(sql);
+        } catch (SQLException ex) {
+            Logger.getLogger(ConnectionDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return rs;
     }
 }

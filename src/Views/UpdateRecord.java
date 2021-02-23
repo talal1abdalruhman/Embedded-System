@@ -7,6 +7,7 @@ package Views;
 
 import DataBase.ConnectionDB;
 import Models.Record;
+import java.awt.event.KeyEvent;
 import java.text.SimpleDateFormat;
 
 /**
@@ -16,15 +17,18 @@ import java.text.SimpleDateFormat;
 public class UpdateRecord extends javax.swing.JFrame {
 
     Record record = new Record();
-    
+
     public UpdateRecord() {
         initComponents();
+        PROCUREMENT_TF.requestFocus();
     }
-    public void getRecordId(String id, String status){
+
+    public void getRecordId(String id, String status) {
         record.setID(id);
         STATUS_CB.setSelectedItem(status);
         System.out.println(id);
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -67,6 +71,11 @@ public class UpdateRecord extends javax.swing.JFrame {
         DATE_jSpinner.setModel(new javax.swing.SpinnerDateModel());
 
         AMOUNT_TF.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        AMOUNT_TF.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                AMOUNT_TFKeyTyped(evt);
+            }
+        });
 
         GLASOUR_SERIAL_TF.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
@@ -201,6 +210,16 @@ public class UpdateRecord extends javax.swing.JFrame {
         myDB.updateRecord(record);
         this.dispose();
     }//GEN-LAST:event_UpdateActionPerformed
+
+    private void AMOUNT_TFKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AMOUNT_TFKeyTyped
+        char c = evt.getKeyChar();
+        if (!((c >= '0') && (c <= '9')
+                || (c == KeyEvent.VK_BACK_SPACE)
+                || (c == KeyEvent.VK_DELETE) || (c == '.'))) {
+            getToolkit().beep();
+            evt.consume();
+        }
+    }//GEN-LAST:event_AMOUNT_TFKeyTyped
 
     /**
      * @param args the command line arguments

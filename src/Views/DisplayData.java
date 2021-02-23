@@ -17,7 +17,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -60,7 +63,7 @@ public class DisplayData extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         Req_status_CB = new javax.swing.JComboBox<>();
-        deleteAllBtn = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -134,10 +137,12 @@ public class DisplayData extends javax.swing.JFrame {
             }
         });
 
-        deleteAllBtn.setText("حذف الكل");
-        deleteAllBtn.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icons8-cancel-25.png"))); // NOI18N
+        jButton1.setText("حذف");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteAllBtnActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -152,11 +157,11 @@ public class DisplayData extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(45, 45, 45)
                 .addComponent(refreshBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(deleteAllBtn)
-                .addGap(18, 18, 18)
                 .addComponent(Extract2Excel, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(106, 106, 106)
+                .addGap(18, 18, 18)
                 .addComponent(updateRecord, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -198,7 +203,7 @@ public class DisplayData extends javax.swing.JFrame {
                             .addComponent(Extract2Excel)
                             .addComponent(refreshBtn)
                             .addComponent(updateRecord)
-                            .addComponent(deleteAllBtn))
+                            .addComponent(jButton1))
                         .addContainerGap())))
         );
 
@@ -233,8 +238,8 @@ public class DisplayData extends javax.swing.JFrame {
                 cell.setCellValue(model.getColumnName(i));
             }
 
-            for (int i = 1; i < model.getRowCount(); i++) {
-                XSSFRow row = ws.createRow(i);
+            for (int i = 0; i < model.getRowCount(); i++) {
+                XSSFRow row = ws.createRow(i+1);
                 for (int j = 1; j < model.getColumnCount(); j++) {
                     XSSFCell cell = row.createCell(j - 1);
                     cell.setCellValue(model.getValueAt(i, j).toString());
@@ -251,6 +256,9 @@ public class DisplayData extends javax.swing.JFrame {
             } catch (IOException ex) {
                 Logger.getLogger(DisplayData.class.getName()).log(Level.SEVERE, null, ex);
             }
+            JOptionPane.showMessageDialog(null, "File saved successfully");
+        } else {
+            JOptionPane.showMessageDialog(null, "Somthing going wrong", "", JOptionPane.ERROR_MESSAGE);
         }
 
     }//GEN-LAST:event_Extract2ExcelActionPerformed
@@ -267,7 +275,7 @@ public class DisplayData extends javax.swing.JFrame {
             updateRecord.setVisible(true);
 
         } else {
-            JOptionPane.showMessageDialog(null, "Select row to update !");
+            JOptionPane.showMessageDialog(null, "Select a row to update !");
         }
     }//GEN-LAST:event_updateRecordActionPerformed
 
@@ -283,11 +291,46 @@ public class DisplayData extends javax.swing.JFrame {
         DisplayData();
     }//GEN-LAST:event_Req_status_CBActionPerformed
 
-    private void deleteAllBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteAllBtnActionPerformed
-        int rs = myDB.deleteAllRecord();
-        System.out.println("records deleted successfully =" + rs);
-        DisplayData();
-    }//GEN-LAST:event_deleteAllBtnActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        int row = jTable1.getSelectedRow();
+        if (row >= 0) {
+            String id = jTable1.getModel().getValueAt(row, 0).toString();
+            switch(getPassword()){
+                case 0:{
+                    JOptionPane.showMessageDialog(null, "Wrong password !", "",JOptionPane.ERROR_MESSAGE);
+                    break;
+                }
+                case 1:{
+                    myDB.deleteRecord(id);
+                    DisplayData();
+                    JOptionPane.showMessageDialog(null, "Row deleted successfully.");
+                    break;
+                }
+                case 3:{
+                    break;
+                }
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Select a row to delete !");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    public int getPassword() {
+        JLabel jPassword = new JLabel("Password:");
+        JTextField password = new JPasswordField();
+        Object[] ob = { jPassword, password};
+        password.requestFocus();
+        int result = JOptionPane.showConfirmDialog(null, ob, "Please input password", JOptionPane.OK_CANCEL_OPTION);
+
+        if (result == JOptionPane.OK_OPTION) {
+            String passwordValue = password.getText();
+            if(passwordValue.equals("10021003"))
+                return 1;
+            else 
+                return 0;
+        }
+        return 2;
+    }
 
     /**
      * @param args the command line arguments
@@ -322,8 +365,8 @@ public class DisplayData extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Extract2Excel;
     private javax.swing.JComboBox<String> Req_status_CB;
-    private javax.swing.JButton deleteAllBtn;
     private javax.swing.JComboBox<String> hospitalCB;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
